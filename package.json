@@ -1,0 +1,17 @@
+{
+  "name": "line-bot-20-2",
+  "version": "1.0.0",
+  "description": "LINE Bot for 20-2 Assitants",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "BR20-2",
+  "license": "MIT",
+  "dependencies": {
+    "@line/bot-sdk": "^7.1.0",
+    "dotenv": "^8.2.0",
+    "node-cron": "^2.0.3",
+    "nodemon": "^2.0.6"
+  }
+}

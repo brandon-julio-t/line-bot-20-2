@@ -1,0 +1,5 @@
+thtoken: 1jPym5qDtsIr0l3viwaXAnvyKWJ_7vu7QTc52Ls19wRmFB64E
+tunnels:
+  bot:
+    addr: 3000
+    proto: http
