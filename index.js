@@ -42,3 +42,5 @@ function broadcastMessage(text) {
     text,
   };
 }
+
+console.log('Bot is running');
