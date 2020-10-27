@@ -1,12 +1,5 @@
-require('dotenv').config();
-
-const line = require('@line/bot-sdk');
 const cron = require('node-cron');
-
-const client = new line.Client({
-  channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN,
-  channelSecret: process.env.LINE_CHANNEL_SECRET,
-});
+const store = require('../store');
 
 let hasSaidHappySunday = false;
 
@@ -30,7 +23,7 @@ cron.schedule(
 
 async function sendBroadcast(text) {
   try {
-    await client.broadcast(broadcastMessage(text));
+    await store.client.broadcast(broadcastMessage(text));
   } catch (e) {
     console.error(JSON.stringify(e));
   }
@@ -42,5 +35,3 @@ function broadcastMessage(text) {
     text,
   };
 }
-
-console.log('Bot is running');
