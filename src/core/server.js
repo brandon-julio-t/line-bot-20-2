@@ -18,7 +18,10 @@ http
       .get({ host: 'localhost', port: '4040', path: '/api/tunnels' }, response => {
         let str = '';
         response.on('data', chunk => (str += chunk));
-        response.on('end', () => console.log(`Bot is running. Public url: ${JSON.parse(str).tunnels[0]?.public_url}`));
+        response.on('end', () => {
+          const tunnel = JSON.parse(str).tunnels[0];
+          if (tunnel) console.log(`Bot is running. Public url: ${tunnel.public_url}`);
+        });
       })
       .on('error', console.error);
   })

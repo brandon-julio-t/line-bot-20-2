@@ -4,7 +4,7 @@
   "description": "LINE Bot for 20-2 Assitants",
   "main": "index.js",
   "scripts": {
-    "bot": "node index.js",
+    "bot": "node --harmony src/index.js",
     "dev": "run-p dev:** --print-label --print-name",
     "dev:server": "nodemon",
     "dev:ngrok": "ngrok start -config ./ngrok.yml bot"
